@@ -1,7 +1,12 @@
-function moveMapToBerlin(map){
-    map.setCenter({lat:52.5159, lng:13.3777});
-    map.setZoom(14);
-  }
+function myfunc()
+{
+  var lo=document.getElementById("longitude").value;
+  var la=document.getElementById("latitude").value;
+
+// function moveMapToBerlin(map){
+//     map.setCenter({lat:la, lng:lo});
+//     map.setZoom(14);
+//   }
   
   /**
    * Boilerplate map initialization code starts below:
@@ -18,7 +23,7 @@ function moveMapToBerlin(map){
   var map = new H.Map(document.getElementById('MAP'),
     defaultLayers.vector.normal.map,{
         zoom: 4,
-        center: {lat:26.906991, lng:75.784550}
+        center: {lat:la, lng:lo},
     
     pixelRatio: window.devicePixelRatio || 1
   });
@@ -33,7 +38,9 @@ function moveMapToBerlin(map){
   // Create the default UI components
   var ui = H.ui.UI.createDefault(map, defaultLayers);
   
+       
   // Now use the map as required...
-  window.onload = function () {
-    moveMapToBerlin(map);
-  }
+  // window.onload = function () {
+  //   moveMapToBerlin(map);
+  // }
+}
